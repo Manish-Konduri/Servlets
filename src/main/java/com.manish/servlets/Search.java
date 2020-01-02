@@ -1,4 +1,4 @@
-package com.Servlets;
+package com.manish.servlets;
 
 import com.manish.Task;
 import org.json.JSONArray;
@@ -11,18 +11,25 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-public class Servlets extends HttpServlet {
-    public Servlets()
+public class Search extends HttpServlet {
+    public Search()
     {
 
     }
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter out = resp.getWriter();
         com.manish.TaskManager taskManager = new com.manish.TaskManager();
-        ArrayList<Task> arrayList = taskManager.display();
-        JSONArray jsArray = new JSONArray(arrayList);
+        PrintWriter out = resp.getWriter();
+        String id1 = req.getParameter("id");
+        if(id1==null)
+        {
+            out.println("Enter Valid id");
+            return;
+        }
+        int id=Integer.parseInt(id1);
+        ArrayList<Task> searchList= new ArrayList<>();
+        searchList=taskManager.search(id);
+        JSONArray jsArray = new JSONArray(searchList);
         //System.out.println();
         out.println(jsArray);
     }

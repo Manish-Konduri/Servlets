@@ -4,16 +4,65 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5">
   <display-name>Servlet</display-name>
-
+  <servlet>
+    <description></description>
+    <display-name>Servlets</display-name>
+    <servlet-name>ServletsAll</servlet-name>
+    <servlet-class>com.manish.servlets.ServletsAll</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletsAll</servlet-name>
+    <url-pattern>/TASKS</url-pattern>
+  </servlet-mapping>
 
   <servlet>
     <description></description>
     <display-name>Servlets</display-name>
     <servlet-name>Servlets</servlet-name>
-    <servlet-class>com.Servlets.Servlets</servlet-class>
+    <servlet-class>com.manish.servlets.Servlets</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Servlets</servlet-name>
-    <url-pattern>/Hi</url-pattern>
+    <url-pattern>/GET</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Servlets</display-name>
+    <servlet-name>Post</servlet-name>
+    <servlet-class>com.manish.servlets.Post</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Post</servlet-name>
+    <url-pattern>/POST</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Servlets</display-name>
+    <servlet-name>Delete</servlet-name>
+    <servlet-class>com.manish.servlets.Delete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Delete</servlet-name>
+    <url-pattern>/DELETE</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Servlets</display-name>
+    <servlet-name>Search</servlet-name>
+    <servlet-class>com.manish.servlets.Search</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Search</servlet-name>
+    <url-pattern>/SEARCH</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Servlets</display-name>
+    <servlet-name>Update</servlet-name>
+    <servlet-class>com.manish.servlets.Update</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Update</servlet-name>
+    <url-pattern>/UPDATE</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -32,6 +32,7 @@ public class TaskManagerRepository implements TaskRepository {
         } catch (IOException e) {
 //           /testing
             throw new IllegalStateException(e);
+            //Testing
         }
     }
 
@@ -156,6 +157,7 @@ public class TaskManagerRepository implements TaskRepository {
 
             if ((simpleDateFormat.format(qw).compareTo(String.valueOf(date)) == 0)) {
                 arl.add(task);
+                //tetsing
             }
         }
         return arl;

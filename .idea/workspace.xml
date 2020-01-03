@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61b0e5c5-3502-49e1-bf8e-5616b163cd6e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/tasks-webapp.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manish/InMemoryTaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manish/InMemoryTaskRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manish/MainExtended.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manish/MainExtended.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manish/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manish/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manish/TaskManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manish/TaskManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manish/TaskManagerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manish/TaskManagerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manish/servlets/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manish/servlets/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/manish/servlets/Servlets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/manish/servlets/Servlets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tasks-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/tasks-webapp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tasks-webapp/WEB-INF/classes/com/manish/InMemoryTaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tasks-webapp/WEB-INF/classes/com/manish/InMemoryTaskRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tasks-webapp/WEB-INF/classes/com/manish/MainExtended.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tasks-webapp/WEB-INF/classes/com/manish/MainExtended.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tasks-webapp/WEB-INF/classes/com/manish/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tasks-webapp/WEB-INF/classes/com/manish/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tasks-webapp/WEB-INF/classes/com/manish/TaskManagerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tasks-webapp/WEB-INF/classes/com/manish/TaskManagerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tasks-webapp/WEB-INF/classes/com/manish/servlets/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tasks-webapp/WEB-INF/classes/com/manish/servlets/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tasks-webapp/WEB-INF/classes/com/manish/servlets/Servlets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tasks-webapp/WEB-INF/classes/com/manish/servlets/Servlets.class" afterDir="false" />
-    </list>
+    <list default="true" id="61b0e5c5-3502-49e1-bf8e-5616b163cd6e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

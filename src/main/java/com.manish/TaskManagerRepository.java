@@ -28,7 +28,9 @@ public class TaskManagerRepository implements TaskRepository {
             objectMapper.writerWithDefaultPrettyPrinter()
                     .writeValue(new FileWriter(TASKS_JSON_FILE), tasks);
 //            Testing
+
         } catch (IOException e) {
+//           /testing
             throw new IllegalStateException(e);
         }
     }

@@ -12,8 +12,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class Servlets extends HttpServlet {
-    public Servlets()
-    {
+    public Servlets() {
 
     }
 

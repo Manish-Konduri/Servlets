@@ -4,11 +4,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Task implements Comparable<Task> {
-        private String name;
-        private String description;
-        private Date date;
-        private int id;
-        private Status status;
+    private String name;
+    private String description;
+    private Date date;
+    private int id;
+    private Status status;
 
     public String getName() {
         return name;
@@ -50,40 +50,30 @@ public class Task implements Comparable<Task> {
         this.status = status;
     }
 
-    public Task()
-    {
+    public Task() {
         this.status = Status.Initial;
     }
 
     @Override
     public String toString() {
-        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-mm-dd");
-        return ("Id : "+id+'\n'+"name : "+name+'\n'+"Description : "+description+'\n'+"Date : "+simpleDateFormat.format(date)+'\n'+"Status : "+ status +'\n');
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        return ("Id : " + id + '\n' + "name : " + name + '\n' + "Description : " + description + '\n' + "Date : " + simpleDateFormat.format(date) + '\n' + "Status : " + status + '\n');
     }
-
-
 
 
     @Override
     public int compareTo(Task task) {
-        if(this.getDate().compareTo(task.getDate())==0)
-        {
-            if(this.getStatus().equals(Status.valueOf("IN_PROGRESS")))
-            {
+        if (this.getDate().compareTo(task.getDate()) == 0) {
+            if (this.getStatus().equals(Status.valueOf("IN_PROGRESS"))) {
                 return -1;
-            }
-            else if(this.getStatus().equals(Status.valueOf("Initial")))
-            {
+            } else if (this.getStatus().equals(Status.valueOf("Initial"))) {
                 return 1;
-            }
-            else {
+            } else {
                 return 0;
             }
-        }
-        else if(this.getDate().compareTo(task.getDate())<0){
+        } else if (this.getDate().compareTo(task.getDate()) < 0) {
             return -1;
-        }
-        else{
+        } else {
             return 1;
         }
     }

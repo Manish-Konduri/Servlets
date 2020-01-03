@@ -17,6 +17,7 @@ public class TaskManagerRepository implements TaskRepository {
     private static final String TASKS_JSON_FILE = "/home/manishk/Desktop/tasks.json";
     ArrayList<Task> tasks;
     ObjectMapper objectMapper = new ObjectMapper();
+
     public TaskManagerRepository() {
         tasks = readFromFile();
     }
@@ -25,7 +26,7 @@ public class TaskManagerRepository implements TaskRepository {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.writerWithDefaultPrettyPrinter()
-                    .writeValue(new FileWriter(TASKS_JSON_FILE),tasks);
+                    .writeValue(new FileWriter(TASKS_JSON_FILE), tasks);
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }
@@ -44,6 +45,7 @@ public class TaskManagerRepository implements TaskRepository {
             return new ArrayList<>();
         }
     }
+
     @Override
     public void adding(int id, String name, String description, Date date) {
         Task d = new Task();
@@ -59,8 +61,8 @@ public class TaskManagerRepository implements TaskRepository {
     @Override
     public int delete(int query) {
         if (tasks.size() > 0) {
-            for(int i=0;i<tasks.size();i++) {
-                if(query==tasks.get(i).getId()){
+            for (int i = 0; i < tasks.size(); i++) {
+                if (query == tasks.get(i).getId()) {
                     tasks.remove(i);
                     writeToFile(tasks);
                     return 1;
@@ -92,8 +94,7 @@ public class TaskManagerRepository implements TaskRepository {
                     return true;
                 }
             }
-        }
-        else if (s == 2) {
+        } else if (s == 2) {
             for (int j = 0; j < tasks.size(); j++) {
                 if (tasks.get(j).getId() == i) {
                     tasks.get(j).setStatus(Status.IN_PROGRESS);
@@ -101,8 +102,7 @@ public class TaskManagerRepository implements TaskRepository {
                     return true;
                 }
             }
-        }
-        else if (s == 3) {
+        } else if (s == 3) {
             for (int j = 0; j < tasks.size(); j++) {
                 if (tasks.get(j).getId() == i) {
                     tasks.get(j).setStatus(Status.Done);
@@ -110,23 +110,24 @@ public class TaskManagerRepository implements TaskRepository {
                     return true;
                 }
             }
-        }
-        else{
+        } else {
             return false;
         }
         return false;
     }
+
     @Override
-    public boolean changeStatusCheck(){
+    public boolean changeStatusCheck() {
 
         writeToFile(tasks);
-        return tasks.size()>0;
+        return tasks.size() > 0;
     }
+
     @Override
     public ArrayList<Task> listByStatus(int query) {
         ArrayList<Task> arl = new ArrayList<>();
 
-        if(query==1) {
+        if (query == 1) {
             for (Task task : tasks) {
                 String qw = task.getStatus().toString();
                 if (qw.equals("Initial") || qw.equals("IN_PROGRESS")) {
@@ -138,18 +139,19 @@ public class TaskManagerRepository implements TaskRepository {
         }
         return null;
     }
+
     @Override
-    public ArrayList<Task> dueToday(){
-        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-mm-dd");
+    public ArrayList<Task> dueToday() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mm-dd");
         ArrayList<Task> arl = new ArrayList<>();
-        long millis=System.currentTimeMillis();
-        java.sql.Date date=new java.sql.Date(millis);
+        long millis = System.currentTimeMillis();
+        java.sql.Date date = new java.sql.Date(millis);
 
 
         for (Task task : tasks) {
             Date qw = task.getDate();
 
-            if((simpleDateFormat.format(qw).compareTo(String.valueOf(date))==0)){
+            if ((simpleDateFormat.format(qw).compareTo(String.valueOf(date)) == 0)) {
                 arl.add(task);
             }
         }
